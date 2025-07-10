@@ -1,0 +1,13 @@
+[server]
+headless = true
+enableCORS = false
+port = 8501
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+primaryColor = "#2C7BE5"             # Calming medical blue (Primary buttons, highlights)
+backgroundColor = "#F8FBFF"          # Very light blue background (Clinical feel)
+secondaryBackgroundColor = "#E9F2FB" # Pale blue-gray for sidebar, widgets
+textColor = "#1C1C1C"                # Almost black, better contrast and readability
