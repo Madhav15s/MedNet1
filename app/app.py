@@ -9,6 +9,9 @@ from pathlib import Path
 import sys
 import os
 
+# Ensure the src directory is in the Python path
+#system path ensure
+#app/app.py is in the app directory
 # Add src to path
 sys.path.append('src')
 
