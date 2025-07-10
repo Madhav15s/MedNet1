@@ -21,6 +21,20 @@ const MEDICAL_TYPES = {
   cardiac: "🫀 Cardiac",
 };
 
+// ✅ Medical scan info for each type
+const MEDICAL_INFO = {
+  chest_xray:
+    "Chest X-rays help detect lung conditions like pneumonia, tuberculosis, and lung cancer. AI can assist radiologists in spotting abnormalities faster.",
+  brain_mri:
+    "Brain MRIs are used to identify tumors, bleeding, nerve damage, and neurological conditions such as stroke or multiple sclerosis.",
+  skin_lesion:
+    "Skin lesion scans help in early detection of skin cancer types like melanoma. AI can aid in classifying lesion severity.",
+  retinal:
+    "Retinal imaging is key for diagnosing diabetic retinopathy, glaucoma, and age-related macular degeneration (AMD).",
+  cardiac:
+    "Cardiac scans like echocardiograms or MRIs evaluate heart size, structure, and function, helping diagnose heart diseases.",
+};
+
 function App() {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
@@ -117,16 +131,33 @@ function App() {
         </button>
 
         {result && (
-          <div className="result-section fade-in">
-            <h2>📊 Results</h2>
-            <p><strong>Prediction:</strong> <span className="highlight">{result.prediction}</span></p>
-            <p><strong>Confidence:</strong> {(result.confidence * 100).toFixed(2)}%</p>
+  <div className="result-section fade-in">
+    <h2>📊 Results</h2>
 
-            <div style={{ marginTop: "20px" }}>
-              <Bar data={chartData} options={chartOptions} />
-            </div>
-          </div>
-        )}
+    <p><strong>🧠 AI Prediction:</strong> <span className="highlight">{result.prediction}</span></p>
+    <p><strong>Confidence:</strong> {(result.confidence * 100).toFixed(2)}%</p>
+
+    {/* ✅ Consultation Advice */}
+    <p className="consult-message">
+      Based on the scan, the AI model predicts <strong>{result.prediction}</strong>. 
+      <br />
+      <span style={{ color: "#e74c3c", fontWeight: "600" }}>
+        Please consult a certified medical professional for further diagnosis and appropriate treatment.
+      </span>
+    </p>
+
+    <div style={{ marginTop: "20px" }}>
+      <Bar data={chartData} options={chartOptions} />
+    </div>
+
+    {/* ✅ Additional Scan Info */}
+    <div style={{ marginTop: "25px", fontSize: "0.95rem", color: "#333", lineHeight: "1.5" }}>
+      <strong>ℹ️ About this Scan:</strong>
+      <p style={{ marginTop: "0.5rem" }}>{MEDICAL_INFO[medicalType]}</p>
+    </div>
+  </div>
+)}
+
       </div>
     </div>
   );
