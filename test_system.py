@@ -181,7 +181,7 @@ def test_streamlit_app():
     try:
         # Test if app can be imported
         sys.path.append('.')
-        import app.app as streamlit_app
+        import MedNet1.app.medinet_backend as streamlit_app
         
         print("   ✅ Streamlit app import")
         

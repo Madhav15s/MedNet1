@@ -1,0 +1,159 @@
+/* General Layout */
+body {
+  background: linear-gradient(to right, #e6f0ff, #f9f9f9);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* Card Styling */
+.app-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Header */
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.2rem;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.select-input,
+.file-input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+.select-input:focus,
+.file-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.file-name {
+  margin-top: 0.6rem;
+  font-style: italic;
+  color: #333;
+}
+
+/* Button */
+.analyze-btn {
+  display: block;
+  width: 100%;
+  padding: 0.95rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.analyze-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Results Section */
+.result-section {
+  background-color: #f1f8ff;
+  padding: 1.8rem;
+  margin-top: 2rem;
+  border-radius: 16px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.result-section h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Chart Container */
+.result-section canvas {
+  margin-top: 1rem;
+  max-height: 300px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .analyze-btn {
+    font-size: 1rem;
+  }
+}
