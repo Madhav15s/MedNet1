@@ -227,7 +227,7 @@ def test_sample_workflow():
     
     try:
         # Create sample dataset
-        from demo import create_sample_dataset
+        from MedNet1.demo import create_sample_dataset
         create_sample_dataset()
         
         # Test if sample data was created
