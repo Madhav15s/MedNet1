@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)](https://python.org)
 [![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react)](https://reactjs.org)
 
+Visit for demo - https://www.youtube.com/watch?v=l_lQYxWWg9Y
 MedNet1 is an AI-powered system for analyzing various medical images across different imaging modalities. It supports multi-class classification and provides accurate predictions, confidence scores, and medically relevant explanations via a modern React frontend.
 
 ## 📋 Table of Contents
